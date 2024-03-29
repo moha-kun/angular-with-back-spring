@@ -1,0 +1,17 @@
+.my-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .625rem;
+}
+
+form > div {
+  margin-bottom: 1.25rem;
+}
+
+form label {
+  margin-bottom: .625rem;
+}
+
+table td {
+  text-align: center;
+}

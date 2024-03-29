@@ -1,0 +1,9 @@
+<form class="form-inline">
+  <div class="form-group mb-2">
+    <label for="staticEmail2" class="sr-only">Email</label>
+    <select class="form-control">
+      <option *ngFor="let member of members">{{ member.name }}</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+</form>

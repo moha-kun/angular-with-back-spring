@@ -1,0 +1,19 @@
+<form>
+  <div class="form-group">
+    <label for="formation-title">Title </label>
+    <input type="text" class="form-control" id="formation-title" [(ngModel)]="formation.title" name="title"/>
+  </div>
+  <div class="form-group">
+    <label for="formation-description">Description </label>
+    <textarea class="form-control" id="formation-description" rows="3" [(ngModel)]="formation.description" name="description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="formation-date-debut">Date de Debut </label>
+    <input type="date" class="form-control" id="formation-date-debut" [(ngModel)]="formation.dateDebut" name="dateDebut"/>
+  </div>
+  <div class="form-group">
+    <label for="formation-date-fin">Date de Fin </label>
+    <input type="date" class="form-control" id="formation-date-fin" [(ngModel)]="formation.dateFin" name="dateFin"/>
+  </div>
+  <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+</form>

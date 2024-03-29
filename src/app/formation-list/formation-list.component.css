@@ -1,0 +1,13 @@
+.my-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .625rem;
+}
+
+table tr:hover {
+  cursor: pointer;
+}
+
+table td {
+  text-align: center;
+}

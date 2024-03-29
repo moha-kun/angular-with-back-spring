@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td scope="col">ID</td>
+      <td scope="col">Name</td>
+      <td scope="col">Email</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let member of members">
+      <td>{{ member.id }}</td>
+      <td>{{ member.name }}</td>
+      <td>{{ member.email }}</td>
+      <td><button (click)="removeMember(formationId, member.id)" class="btn btn-outline-danger">Remove</button></td>
+    </tr>
+  </tbody>
+</table>

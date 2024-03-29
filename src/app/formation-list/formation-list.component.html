@@ -1,0 +1,30 @@
+<div class="my-header">
+  <h3>Display all Formations</h3>
+  <button class="btn btn-primary" (click)="createNewFormation()">Create New</button>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td scope="col">ID</td>
+      <td scope="col">Title</td>
+      <td scope="col">Description</td>
+      <td scope="col">Date Debut</td>
+      <td scope="col">Date Fin</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let formation of formations">
+      <td>{{ formation.id }}</td>
+      <td>{{ formation.title }}</td>
+      <td>{{ formation.description }}</td>
+      <td>{{ formation.dateDebut | date: 'dd/MM/yyyy' }}</td>
+      <td>{{ formation.dateFin | date: 'dd/MM/yyyy' }}</td>
+      <td><button (click)="displaySingleFormation(formation.id)" class="btn btn-outline-success">Details</button></td>
+      <td><button (click)="updateFormation(formation.id)" class="btn btn-outline-primary">Update</button></td>
+      <td><button (click)="deleteFormation(formation.id)" class="btn btn-outline-danger">Delete</button></td>
+    </tr>
+  </tbody>
+</table>

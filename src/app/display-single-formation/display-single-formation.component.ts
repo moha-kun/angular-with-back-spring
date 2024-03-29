@@ -28,7 +28,6 @@ export class DisplaySingleFormationComponent {
   formation: Formation;
   members: Member[];
   allMembers: Member[];
-  selectedMember: number = 0
 
   constructor(
     private router: Router,
@@ -56,11 +55,11 @@ export class DisplaySingleFormationComponent {
       .subscribe((data) => (this.members = data));
   }
 
-  addMemberToFormation($event: Event, formationId: number) {
+  addMemberToFormation($event: Event, formationId: number, memberId: string) {
     $event.preventDefault();
-    console.log(formationId, ' ', this.selectedMember);
+    console.log(formationId, ' ', memberId);
     this.enrollService
-      .addMemberToFormation(formationId, this.selectedMember)
+      .addMemberToFormation(formationId, parseInt(memberId))
       .subscribe(() => this.getMembers());
   }
 

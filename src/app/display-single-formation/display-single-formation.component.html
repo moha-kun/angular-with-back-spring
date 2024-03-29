@@ -30,12 +30,12 @@
   <div class="my-form-group">
     <div class="form-group mb-2">
       <label for="staticEmail2" class="sr-only">Email</label>
-      <select [(ngModel)]="selectedMember" class="form-control">
+      <select #selectedMember class="form-control">
         <option *ngFor="let member of allMembers" value="{{member.id}}">{{ member.name }}</option>
       </select>
     </div>
     <!-- TODO: this need to be fixed -->
-    <button (click)="addMemberToFormation($event, formation.id)" class="btn btn-primary mb-2">Enroll</button>
+    <button (click)="addMemberToFormation($event, formation.id, selectedMember.value)" class="btn btn-primary mb-2">Enroll</button>
   </div>
   <div class="form-group">
     <label  class="form-label">Member List</label>
